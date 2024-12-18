@@ -10,44 +10,44 @@ https://www.tooplate.com/view/2131-wedding-lite
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  --white-color:                  #ffffff;
-  --primary-color:                #ff5500;
-  --secondary-color:              #f1c522;
-  --section-bg-color:             #f9f9f9;
-  --custom-btn-bg-color:          #cb7575;
-  --dark-color:                   #000000;
-  --p-color:                      #717275;
-  --border-color:                 #e9eaeb;
-  --icon-color:                   #28856b;
+  --white-color: #ffffff;
+  --primary-color: #ff5500;
+  --secondary-color: #f1c522;
+  --section-bg-color: #fff6f9;
+  --custom-btn-bg-color: #cb7575;
+  --dark-color: #000000;
+  --p-color: #717275;
+  --border-color: #e9eaeb;
+  --icon-color: #28856b;
+  --light-pink-color: #fff6f9;
 
-  --body-font-family:             'Source Sans Pro', sans-serif;
-  --title-font-family:            'Amatic SC', cursive;
+  --body-font-family: "Source Sans Pro", sans-serif;
+  --title-font-family: "Amatic SC", cursive;
 
-  --h1-font-size:                 72px;
-  --h2-font-size:                 48px;
-  --h3-font-size:                 36px;
-  --h4-font-size:                 32px;
-  --h5-font-size:                 24px;
-  --h6-font-size:                 22px;
-  --p-font-size:                  20px;
-  --menu-font-size:               14px;
-  --copyright-font-size:          16px;
+  --h1-font-size: 72px;
+  --h2-font-size: 48px;
+  --h3-font-size: 36px;
+  --h4-font-size: 32px;
+  --h5-font-size: 24px;
+  --h6-font-size: 22px;
+  --p-font-size: 20px;
+  --menu-font-size: 14px;
+  --copyright-font-size: 16px;
 
-  --border-radius-large:          100px;
-  --border-radius-medium:         20px;
-  --border-radius-small:          10px;
+  --border-radius-large: 100px;
+  --border-radius-medium: 20px;
+  --border-radius-small: 10px;
 
-  --font-weight-light:            300;
-  --font-weight-normal:           400;
-  --font-weight-medium:           500;
-  --font-weight-bold:             700;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
 }
 
 body {
-    background: var(--white-color);
-    font-family: var(--body-font-family); 
+  background: var(--white-color);
+  font-family: var(--body-font-family);
 }
-
 
 /*---------------------------------------
   TYPOGRAPHY               
@@ -109,7 +109,7 @@ ul li {
   font-weight: var(--font-weight-light);
 }
 
-a, 
+a,
 button {
   touch-action: manipulation;
   transition: all 0.3s;
@@ -163,7 +163,6 @@ strong {
   margin: auto;
 }
 
-
 /*---------------------------------------
   SECTION TITLE               
 -----------------------------------------*/
@@ -195,7 +194,6 @@ strong {
   line-height: 30px;
 }
 
-
 /*---------------------------------------
   PRE LOADER               
 -----------------------------------------*/
@@ -223,10 +221,13 @@ strong {
 }
 
 @keyframes pulse {
-  from { transform: scale(0.8); }
-  to { transform: scale(1.2); }
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1.2);
+  }
 }
-
 
 /*---------------------------------------
   IMAGE HOVER               
@@ -246,7 +247,6 @@ strong {
   display: block;
   transition: all 0.5s;
 }
-
 
 /*---------------------------------------
   CUSTOM BUTTON               
@@ -283,10 +283,9 @@ strong {
 
 .custom-btn:hover {
   background: var(--secondary-color);
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
   color: var(--white-color);
 }
-
 
 /*---------------------------------------
   NAVIGATION              
@@ -305,7 +304,7 @@ strong {
 }
 
 .is-sticky .navbar {
-  background: var(--white-color);
+  background: var(--light-pink-color);
 }
 
 .navbar-brand {
@@ -336,7 +335,7 @@ strong {
   padding-bottom: 15px;
 }
 
-.navbar-nav .nav-link.active, 
+.navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
   color: var(--custom-btn-bg-color);
 }
@@ -364,7 +363,8 @@ strong {
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
   transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
   transition: top 300ms 50ms ease, transform 300ms 350ms ease;
-  transition: top 300ms 50ms ease, transform 300ms 350ms ease, -webkit-transform 300ms 350ms ease;
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease,
+    -webkit-transform 300ms 350ms ease;
   top: 0;
 }
 
@@ -389,14 +389,15 @@ strong {
 .navbar-toggler .navbar-toggler-icon:after {
   transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
   transition: top 300ms 350ms ease, transform 300ms 50ms ease;
-  transition: top 300ms 350ms ease, transform 300ms 50ms ease, -webkit-transform 300ms 50ms ease;
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease,
+    -webkit-transform 300ms 50ms ease;
   position: absolute;
   right: 0;
   left: 0;
   background: var(--dark-color);
   width: 30px;
   height: 2px;
-  content: '';
+  content: "";
 }
 
 .navbar-toggler .navbar-toggler-icon::before {
@@ -407,15 +408,15 @@ strong {
   top: 8px;
 }
 
-
 /*---------------------------------------
   HERO              
 -----------------------------------------*/
 .hero-container {
   background-color: #d9d8d6;
-  background-image: url('../images/couple-hugging-laughing-near-wall.png');
+  background-image: url("../images/M-D02.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover !important;
+  background-position: center center;
   border-radius: var(--border-radius-small);
   position: relative;
   overflow: hidden;
@@ -426,7 +427,6 @@ strong {
 .hero-container h2 {
   color: var(--custom-btn-bg-color);
 }
-
 
 /*---------------------------------------
   SAVE THE DATE              
@@ -459,7 +459,6 @@ strong {
   display: block;
   line-height: normal;
 }
-
 
 /*---------------------------------------
   ABOUT              
@@ -517,7 +516,7 @@ strong {
   color: transparent;
   top: 50%;
   right: -11px;
-  transform: translate(0, -50%) rotate(135deg) ;
+  transform: translate(0, -50%) rotate(135deg);
 }
 
 .nav-tabs .nav-link.active::after {
@@ -526,7 +525,7 @@ strong {
   border-left-color: var(--secondary-color);
 }
 
-.nav-tabs .nav-item.show .nav-link, 
+.nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-link:focus {
   border-color: var(--border-color);
@@ -534,11 +533,10 @@ strong {
 }
 
 .nav-tabs .nav-link.active h3,
-.nav-tabs .nav-link:focus h3, 
+.nav-tabs .nav-link:focus h3,
 .nav-tabs .nav-link:hover h3 {
   color: var(--primary-color);
 }
-
 
 /*---------------------------------------
   GALLERY              
@@ -550,20 +548,21 @@ strong {
 
 .gallery-thumb-small {
   height: 100%;
+  max-height: 300px;
 }
 
 .gallery-thumb-small .gallery-image {
   width: 100%;
   height: 100%;
+  max-height: 300px;
   object-fit: cover;
 }
-
 
 /*---------------------------------------
   RSVP              
 -----------------------------------------*/
 .rsvp-section {
-  background-image: url('../images/closeup-shot-newlywed-couple-sitting-bench.jpg');
+  /* background-image: url("../images/wedding-pics/MD-BG.jpg"); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -574,7 +573,6 @@ strong {
   border-radius: var(--border-radius-medium);
   padding: 50px;
 }
-
 
 /*---------------------------------------
   CUSTOM FORM               
@@ -646,18 +644,31 @@ strong {
   transform: translate(0);
 }
 
-
 /*---------------------------------------
   SITE FOOTER              
 -----------------------------------------*/
 .site-footer {
-  background-image: url('../images/young-asian-pregnant-couple-using-laptop.jpeg');
+  background-image: url("../images/wedding-pics/0MT05903.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 150px;
+  background-position: center center;
+  padding-top: 250px;
   padding-bottom: 150px;
   text-align: center;
   position: relative;
+
+  /* background-image: url("../images/wedding-pics/MD07.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: var(--border-radius-small);
+  padding-top: 150px;
+  padding-bottom: 150px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 50px;
+  height: calc(90vh - 98px); */
 }
 
 .site-footer::after {
@@ -681,7 +692,6 @@ strong {
 .copyright-text {
   font-size: var(--copyright-font-size);
 }
-
 
 /*---------------------------------------
   SOCIAL ICON               
@@ -714,7 +724,6 @@ strong {
 .social-icon-link:hover {
   color: var(--white-color);
 }
-
 
 /*---------------------------------------
   RESPONSIVE STYLES               
@@ -839,11 +848,11 @@ strong {
     top: inherit;
     right: 0;
     left: 50%;
-    transform: translate(-50%, 0) rotate(225deg) ;
+    transform: translate(-50%, 0) rotate(225deg);
     bottom: -11px;
   }
 
-  .nav-tabs .nav-item.show .nav-link, 
+  .nav-tabs .nav-item.show .nav-link,
   .nav-tabs .nav-link.active,
   .nav-tabs .nav-link:focus {
     border-color: var(--border-color);
