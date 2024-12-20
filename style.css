@@ -28,8 +28,8 @@
 :root {
   --max-width: 1024px;
   /* color */
-  --primary-color: #587c4c;
-  --bg: #ecfae8;
+  --primary-color: #ff095b;
+  --bg: #fff6f9;
   --second-color: #e5ab63;
   --text-white: #fff;
   --overlay: black;
