@@ -269,6 +269,11 @@ html {
 .container-fluid {
   --bs-gutter-x: 0;
 }
+.fixed-bg {
+  background-image: url("img/beu/nen.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .gift-wrapper {
   position: relative;
   display: inline-block;
@@ -646,9 +651,12 @@ body {
   min-height: 100vh;
 }
 .bg-top {
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
+  /* z-index: 99; */
+  width: 200px;
+  max-width: 280px;
 }
 .bg-right {
   position: absolute;
@@ -657,9 +665,10 @@ body {
   max-width: 200px;
 }
 .bg-bottom-left {
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  left: -120px;
+  right: 0;
+  width: 200px;
   max-width: 280px;
 }
 .leaf-1 {
@@ -678,6 +687,7 @@ body {
   font-size: 20px;
   font-family: var(--title-font);
   margin-bottom: 40px;
+  margin-top: 40px;
 }
 .banner-name {
   font-family: "title-font";
@@ -846,6 +856,11 @@ body {
   transform: scale(1.2);
 }
 /* COUNTDOWN */
+#countdown-section {
+  position: relative;
+  z-index: 9;
+  height: 100vh;
+}
 .section-countdown {
   position: relative;
   color: var(--text-white);
