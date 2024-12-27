@@ -63,6 +63,10 @@ body {
   margin: 0 auto;
 }
 
+.heart img {
+  width: 1.8rem;
+}
+
 /* Random positions and animations for hearts */
 .heart:nth-child(1) {
   left: 10%;

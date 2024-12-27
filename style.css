@@ -12,9 +12,15 @@
 }
 
 @font-face {
+  font-family: "handwriting";
+  src: url("./font/SVN-Betalisa.otf") format("truetype"); /* Path to your font file */
+}
+
+@font-face {
   font-family: script-font;
   src: url(./font/SVN-Signatie.otf);
 }
+
 @font-face {
   font-family: title-font;
   src: url(./font/DFVN_Berfilem.otf);
@@ -56,6 +62,7 @@
   --script-font: script-font;
   --main-font: main-font;
   --title-font: title-font;
+  --hand-writing-font: handwriting;
   /* space */
   --space-4: 4px;
   --space-8: 8px;
@@ -270,7 +277,7 @@ html {
   --bs-gutter-x: 0;
 }
 .fixed-bg {
-  background-image: url("img/beu/nen.png");
+  background-image: url("img/materials/nen.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -543,8 +550,14 @@ body {
 .script-font {
   font-family: var(--script-font);
 }
+.hand-writing-font {
+  font-family: var(--hand-writing-font) !important;
+}
 .title-font {
   font-family: var(--title-font);
+}
+.text-medium {
+  font-size: 2rem;
 }
 .hidden {
   display: none;
@@ -655,7 +668,7 @@ body {
   top: 0;
   left: 0;
   /* z-index: 99; */
-  width: 200px;
+  width: 100px;
   max-width: 280px;
 }
 .bg-right {
@@ -668,7 +681,7 @@ body {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 200px;
+  width: 100px;
   max-width: 280px;
 }
 .leaf-1 {
@@ -1009,9 +1022,209 @@ body {
   font-size: 14px;
 }
 
-/* BẢN ĐỒ */
+/* QR CODE */
+.qr-code-container {
+  display: flex;
+  gap: clamp(20px, 4vw, 40px);
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-/* END BẢN ĐỒ */
+.qr-card {
+  background: white;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 400px;
+}
+
+.bride-qr-card {
+  background: linear-gradient(to bottom right, #fff, #fff5f5);
+}
+
+.groom-qr-card {
+  background: linear-gradient(to bottom right, #fff, #f5f5ff);
+}
+
+.qr-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bride-qr-card .decorative-border {
+  background: linear-gradient(90deg, #f9d1d1, #ffd1dc, #f9d1d1);
+}
+
+.groom-qr-card .decorative-border {
+  background: linear-gradient(90deg, #d1d1f9, #d1dcff, #d1d1f9);
+}
+
+.decorative-border {
+  height: 8px;
+  position: relative;
+}
+
+.hearts-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: clamp(10px, 3vw, 20px);
+  padding: 10px;
+}
+
+.bride-qr-card .hearts-pattern {
+  color: #ff9eaa;
+}
+
+.groom-qr-card .hearts-pattern {
+  color: #9eaaff;
+}
+
+.content {
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+  text-align: center;
+}
+
+.role {
+  font-family: "Source Sans Pro", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.names {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  color: #2c3e50;
+  margin: 0 0 clamp(10px, 2vw, 20px) 0;
+  line-height: 1.2;
+}
+
+.date,
+.location {
+  color: #666;
+  font-weight: 300;
+  margin: 5px 0;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+}
+
+.qr-container {
+  margin: clamp(20px, 4vw, 30px) auto;
+  padding: clamp(10px, 2vw, 15px);
+  background: white;
+  border-radius: 10px;
+  width: fit-content;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.bride-qr-card .qr-container {
+  border: 1px solid #ffd1dc;
+}
+
+.groom-qr-card .qr-container {
+  border: 1px solid #d1dcff;
+}
+
+.qr-code {
+  width: clamp(180px, 50vw, 220px);
+  height: clamp(180px, 50vw, 220px);
+  object-fit: contain;
+}
+
+.scan-text {
+  color: #666;
+  font-style: italic;
+  margin: 15px 0;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+.footer-heart {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  margin-top: clamp(10px, 2vw, 15px);
+}
+
+.bride-qr-card .footer-heart {
+  color: #ff9eaa;
+}
+
+.groom-qr-card .footer-heart {
+  color: #9eaaff;
+}
+
+/* Tablet Specific Styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .qr-card {
+    flex: 0 1 calc(50% - 20px);
+    min-width: 320px;
+  }
+
+  .content {
+    padding: 2rem;
+  }
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 767px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    gap: 30px;
+    padding: 10px;
+  }
+
+  .qr-card {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .decorative-border {
+    height: 6px;
+  }
+
+  .hearts-pattern {
+    gap: 15px;
+  }
+
+  .hearts-pattern i {
+    font-size: 0.8rem;
+  }
+
+  .content {
+    padding: 1.5rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 320px) {
+  .names {
+    font-size: 1.5rem;
+  }
+
+  .qr-code {
+    width: 160px;
+    height: 160px;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+}
+
+/* END QR CODE */
 
 /* THANK YOU */
 .section-thankyou {
@@ -1030,13 +1243,13 @@ body {
   justify-content: center;
   align-items: center;
 }
-.thankyou-bg {
+/* .thankyou-bg {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: -1;
-}
+} */
 .thankyou-title {
   font-size: 64px;
   font-family: var(--script-font);
@@ -1046,8 +1259,100 @@ body {
   text-align: center;
   margin-bottom: 40px;
 }
+.image-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.image-container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Optional overlay for better text visibility */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Adjust opacity as needed */
+}
+
+/* Content styling */
+.thankyou-content {
+  font-family: "handwriting";
+  font-display: swap;
+  position: relative;
+  z-index: 2;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 20px;
+  padding-top: 13rem;
+}
+
+/* Mobile optimization */
+@media screen and (max-width: 768px) {
+  .bg-section {
+    background-attachment: scroll; /* Better performance on mobile */
+  }
+}
 
 /* END THANK YOU */
+
+/* MAPS */
+.map-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.map-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  width: 100%;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 768px) {
+  .map-container {
+    padding-top: 75%; /* 4:3 Aspect Ratio for better visibility on tablets */
+  }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 480px) {
+  .map-section {
+    padding: 0 10px;
+  }
+
+  .map-container {
+    padding-top: 100%; /* 1:1 Aspect Ratio for mobile */
+  }
+}
+/* END MAPS */
 
 /* ====== END MAIN CSS ============ */
 
