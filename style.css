@@ -43,8 +43,12 @@
   --body-bg: ;
   --main-bg: ;
   --box-bg: ;
-  --heart-color: #ffb6b6;
+  --heart-color: #e85e5e;
   --white-color: #ffffff;
+  --dress-code-01: #ffffff;
+  --dress-code-02: #ef9a9a;
+  --dress-code-03: #000000;
+  --dress-code-04: #fffdd0;
 
   /* fontsize */
   --fs-1: ;
@@ -960,19 +964,19 @@ body {
 }
 
 .circle-1 {
-  background-color: #f5efe6;
+  background-color: var(--dress-code-01);
 }
 
 .circle-2 {
-  background-color: #d4ccbb;
+  background-color: var(--dress-code-02);
 }
 
 .circle-3 {
-  background-color: #8b9b7e;
+  background-color: var(--dress-code-03);
 }
 
 .circle-4 {
-  background-color: #2c362a;
+  background-color: var(--dress-code-04);
 }
 /* END DRESSCODE */
 
