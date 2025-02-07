@@ -627,6 +627,9 @@ body {
   justify-content: center;
   align-items: center;
   background: none repeat scroll 0 0 var(--white-color);
+  background-image: url(./img/wedding-pics/loading.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .spinner {
